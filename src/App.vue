@@ -1,6 +1,6 @@
 <script setup>
 function logInternal(){
-  console.log('VITE_INTERNAL', process.env.VITE_INTERNAL)
+  console.log('VITE_INTERNAL', import.meta.env.VITE_INTERNAL)
 }
 </script>
 
