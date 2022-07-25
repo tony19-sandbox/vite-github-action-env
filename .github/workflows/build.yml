@@ -11,8 +11,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      VITE_INTERNAL: true
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
@@ -23,6 +21,8 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
+      env:
+        VITE_INTERNAL: true
     - name: Archive Results
       uses: actions/upload-artifact@v3
       with:
