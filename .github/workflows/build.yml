@@ -9,11 +9,10 @@ permissions:
 on: push
 
 jobs:
-  env:
-    VITE_INTERNAL: true
-
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_INTERNAL: true
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
